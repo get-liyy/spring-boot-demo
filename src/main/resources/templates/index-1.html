@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ZeroTitle</title>
+</head>
+<body>
+    <div style="text-align: center;margin: 0 auto;width: 1000px;">
+        <h1>Zero说这就是一个标题</h1>
+        <table width="100%" border="1" cellspacing="1" cellpadding="0">
+            <tr>
+                <td>作者</td>
+                <td>名称</td>
+                <td>地址</td>
+            </tr>
+            <!-- thymesVar -->
+            <tr th:each="zero : ${zeroList}">
+                <td th:text="${zero.author}">Zero</td>
+                <td th:text="${zero.title}">spring</td>
+                <td><a th:href="${zero.url}" target="_blank">点点点</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
